@@ -1,0 +1,12 @@
+class Solution:
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        max_element=-1
+        for i in range(len(arr)-1,-1,-1):
+            temp=arr[i]
+            arr[i]=max_element
+            max_element=max(max_element,temp)
+        return arr    
+          
+sol=Solution()
+arr = [2,4,5,3,1,2]
+print(sol.replaceElements(arr))
